@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# Local config and state (never commit)
+.env
+state.db
+state.db-journal
+state.db-wal
+state.db-shm
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+
+# Superpowers brainstorming sessions
+.superpowers/
+
+# Local development docs (design specs, plans)
+docs/specs/

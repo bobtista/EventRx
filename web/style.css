@@ -1,0 +1,281 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #111;
+  color: #eee;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #333;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-left h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.status-pill {
+  background: #1a3a1a;
+  color: #4ade80;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+.status-pill.error {
+  background: #3a1a1a;
+  color: #e74c3c;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: #888;
+}
+
+.header-right button {
+  background: none;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.header-right button:hover {
+  border-color: #666;
+}
+
+.header-right button.off {
+  opacity: 0.5;
+}
+
+/* Alert cards */
+#alerts {
+  padding: 16px 20px 0;
+}
+
+.alert-card {
+  border: 2px solid #e74c3c;
+  background: #3a1a1a;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.alert-card.revision {
+  border-color: #e7a73c;
+  background: #2a2a1a;
+}
+
+.alert-card .alert-label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #e74c3c;
+  margin-bottom: 5px;
+}
+
+.alert-card.revision .alert-label {
+  color: #e7a73c;
+}
+
+.alert-card .alert-company {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.alert-card .alert-ticker {
+  color: #4a9eff;
+}
+
+.alert-card .alert-details {
+  color: #aaa;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.alert-card .alert-pdf a {
+  color: #4a9eff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.alert-card .alert-pdf a:hover {
+  text-decoration: underline;
+}
+
+.alert-card .dismiss-btn {
+  background: #444;
+  border: none;
+  color: #ccc;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.alert-card .dismiss-btn:hover {
+  background: #555;
+}
+
+/* Divider */
+.divider {
+  margin: 0 20px;
+  border-bottom: 1px solid #333;
+}
+
+/* History */
+#history-section {
+  padding: 12px 20px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.history-title {
+  font-weight: bold;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.history-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#search-input {
+  width: 240px;
+  font-size: 12px;
+  padding: 6px 10px;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #eee;
+}
+
+#search-input:focus {
+  outline: none;
+  border-color: #4a9eff;
+}
+
+#event-count {
+  color: #888;
+  font-size: 12px;
+}
+
+#history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+#history-table thead th {
+  text-align: left;
+  padding: 8px;
+  color: #888;
+  font-weight: normal;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
+
+#history-table thead th:hover {
+  color: #ccc;
+}
+
+#history-table tbody td {
+  padding: 8px;
+  border-bottom: 1px solid #222;
+}
+
+#history-table tbody tr:hover {
+  background: #1a1a1a;
+}
+
+.ticker-cell {
+  color: #4a9eff;
+}
+
+.ticker-unknown {
+  color: #888;
+}
+
+.pdf-link {
+  color: #4a9eff;
+  text-decoration: none;
+}
+
+.pdf-link:hover {
+  text-decoration: underline;
+}
+
+/* Notification permission prompt */
+.notif-prompt {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.notif-prompt p {
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+
+.notif-prompt button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  border: none;
+  margin-right: 8px;
+}
+
+.notif-prompt button:first-of-type {
+  background: #4a9eff;
+  color: white;
+}
+
+.notif-prompt button.secondary {
+  background: #444;
+  color: #ccc;
+}
+
+.hidden {
+  display: none;
+}

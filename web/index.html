@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventRx</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="header">
+    <div class="header-left">
+      <h1>EventRx</h1>
+      <span id="status-pill" class="status-pill">● Watching</span>
+    </div>
+    <div class="header-right">
+      <span id="last-checked">Last checked: —</span>
+      <button id="notif-toggle" title="Toggle notifications">🔔 Notifications</button>
+      <button id="sound-toggle" title="Toggle sound">🔊 Sound</button>
+    </div>
+  </header>
+
+  <section id="alerts"></section>
+
+  <div class="divider"></div>
+
+  <section id="history-section">
+    <div class="history-header">
+      <span class="history-title">History</span>
+      <div class="history-controls">
+        <input type="text" id="search-input" placeholder="Search company or ticker...">
+        <span id="event-count"></span>
+      </div>
+    </div>
+    <table id="history-table">
+      <thead>
+        <tr>
+          <th data-sort="letter_date">Date ↓</th>
+          <th data-sort="company_name">Company</th>
+          <th data-sort="ticker">Ticker</th>
+          <th data-sort="application_number">App #</th>
+          <th>PDF</th>
+        </tr>
+      </thead>
+      <tbody id="history-body"></tbody>
+    </table>
+  </section>
+
+  <div id="notif-prompt" class="notif-prompt hidden">
+    <p>EventRx needs notification permission to alert you when new CRLs are published.</p>
+    <button id="enable-notif-btn">Enable Notifications</button>
+    <button id="dismiss-notif-btn" class="secondary">Not now</button>
+  </div>
+
+  <script type="module" src="ui.js"></script>
+</body>
+</html>
