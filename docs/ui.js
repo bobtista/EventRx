@@ -36,21 +36,6 @@ async function init() {
   showNotifPromptIfNeeded();
   poll();
   setInterval(poll, POLL_INTERVAL_MS);
-
-  // TODO: REMOVE — test alert fires 5s after load, switch away to see notification
-  setTimeout(() => {
-    const testRecord = {
-      company_name: "Test Corp",
-      ticker: "TEST",
-      application_number: "BLA 999999",
-      letter_date: "04/13/2026",
-      event_id: "test-" + Date.now(),
-      pdf_url: "#",
-      is_revision: false,
-    };
-    renderAlertCard(testRecord);
-    alertNewCrl(testRecord, "TEST", false);
-  }, 5000);
 }
 
 // --- Backfill ---
